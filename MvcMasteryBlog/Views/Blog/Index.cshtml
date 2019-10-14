@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Blog</h1>
+    <div>
+
+        <section id="Blogs">
+            @foreach (var blog in Model)
+            {
+
+                <article>
+                    <p><a href="/Product/Details/@blog.ID">@blog.Title</a></p>
+                    <img src="@blog.Image" alt="McLaren 570 Spyder" style=" height: 120px; width:200px;" />
+                </article>
+            }
+        </section>
+
+
+    </div>
+    <footer><h6>&copy;Nobody Cares Inc. 2019</h6></footer>
+</body>
+</html>
