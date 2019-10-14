@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MvcMasteryBlog.Models.Blog>
+﻿@model MvcMasteryBlog.Models.Blog
 
 @{
     Layout = null;
@@ -12,6 +12,16 @@
     <title>Details</title>
 </head>
 <body>
-    
+    <div>
+        <p><img src="@Model.Image" alt=@Model.Title style=" height: 240px; width:350px;" /></p>
+        <p><span>@Model.Title</span></p>
+        <p>Manufacturer: <span>@Model.Author</span></p>
+        <p>Make: <span>@Model.Genre</span></p>
+        <p>Model: <span>@Model.Body</span></p>
+        <p>Category: <span>@Model.Date</span></p>
+        <p>Category: <span>@Model.Tags</span></p>
+
+        <hr />
+    </div>
 </body>
 </html>

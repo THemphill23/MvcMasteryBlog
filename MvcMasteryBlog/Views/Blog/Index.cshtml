@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<MvcMasteryBlog.Models.Blog>
 @{
     Layout = null;
 }
@@ -17,10 +17,9 @@
         <section id="Blogs">
             @foreach (var blog in Model)
             {
-
                 <article>
-                    <p><a href="/Product/Details/@blog.ID">@blog.Title</a></p>
-                    <img src="@blog.Image" alt="McLaren 570 Spyder" style=" height: 120px; width:200px;" />
+                    <p><a href="/Blog/Details/@blog.ID">@blog.Title</a></p>
+                    <img src="@blog.Image" alt="blog" style=" height: 120px; width:200px;" />
                 </article>
             }
         </section>
