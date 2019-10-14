@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using MvcMasteryBlog.Data;
+using MvcMasteryBlog.Models;
+using MvcMasteryBlog.Repositories;
 
 namespace MvcMasteryBlog
 {
@@ -16,6 +19,9 @@ namespace MvcMasteryBlog
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddDbContext<BlogContext>();
+            services.AddScoped<Repository<Blog>, BlogRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -19,19 +19,20 @@ namespace MvcMasteryBlog.Models
         public Blog()
         {
         }
-        public virtual ICollection<Blog> Blogs { get; set; }
+
+        //public virtual ICollection<Blog> Blogs { get; set; }
 
         public Blog(int id, string image, string title, int date, string body,
             string author, string genre, string tags)
         {
-            this.ID = id;
-            this.Image = image;
-            this.Title = title;
-            this.Date = date;
-            this.Body = body;
-            this.Author = author;
-            this.Genre = genre;
-            this.Tags = tags;
+            ID = id;
+            Image = image;
+            Title = title;
+            Date = date;
+            Body = body;
+            Author = author;
+            Genre = genre;
+            Tags = tags;
         }
 
         //public List<Blog> blogEntries = new List<Blog>()

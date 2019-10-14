@@ -5,6 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MvcMasteryBlog.Models;
+using Microsoft.AspNetCore.Mvc;
+using MvcMasteryBlog.Repositories;
 
 namespace MvcMasteryBlog.Controllers
 {
@@ -25,7 +28,7 @@ namespace MvcMasteryBlog.Controllers
         }
 
 
-        public ViewResult Detail(int id)
+        public ViewResult Details(int id)
         {
             var model = blogRepo.GetById(id);
 

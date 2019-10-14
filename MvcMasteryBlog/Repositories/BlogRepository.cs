@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MvcMasteryBlog.Models;
+using MvcMasteryBlog.Data;
 
 namespace MvcMasteryBlog.Repositories
 {

@@ -15,7 +15,7 @@ namespace MvcMasteryBlog.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = "Server=(localdb)\\mssqllocaldb;Database=VehicleReviews;Trusted_Connection=True;";
+            var connectionString = "Server=(localdb)\\mssqllocaldb;Database=BlogReviews;Trusted_Connection=True;";
 
             optionsBuilder.UseSqlServer(connectionString)
                           .UseLazyLoadingProxies();
@@ -25,6 +25,42 @@ namespace MvcMasteryBlog.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Blog>().HasData(
+                new Blog()
+                {
+                    ID = 1,
+                    Image = "image",
+                    Title = "Food Blog",
+                    Body = "Lorem Ipsum",
+                    Genre = "Food",
+                    Author = "Chef",
+                    Tags = "Food, Cooking",
+                    Date = 2077,
+                },
+
+
+                new Blog()
+                {
+                    ID = 2,
+                    Image = "image",
+                    Title = "Food Blog",
+                    Body = "Lorem Ipsum",
+                    Genre = "Food",
+                    Author = "Chef",
+                    Tags = "Food, Cooking",
+                    Date = 2077,
+                },
+                new Blog()
+                {
+                    ID = 3,
+                    Image = "image",
+                    Title = "Food Blog",
+                    Body = "Lorem Ipsum",
+                    Genre = "Food",
+                    Author = "Chef",
+                    Tags = "Food, Cooking",
+                    Date = 2077,
+                });
         }
     }
 }
