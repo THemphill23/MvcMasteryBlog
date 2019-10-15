@@ -1,0 +1,32 @@
+﻿@model IEnumerable<MvcMasteryBlog.Models.Tag>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Tags</h1>
+    <div>
+
+        <section id="Tag">
+            @foreach (var tag in Model)
+            {
+
+                <article>
+                    <p><a href="/Blog/Details/@tag.BlogID">@tag.Name</a></p>
+                </article>
+            }
+        </section>
+
+
+    </div>
+    <footer><h6>&copy;Nobody Cares Inc. 2019</h6></footer>
+</body>
+</html>

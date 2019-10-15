@@ -14,14 +14,15 @@ namespace MvcMasteryBlog.Models
         public string Body { get; set; }
         public string Author { get; set; }
         public string Genre { get; set; }
-        public string Tags { get; set; }
+
+        public virtual ICollection<Tag> Tags { get; set; }
 
         public Blog()
         {
         }
 
         public Blog(int id, string image, string title, int date, string body,
-            string author, string genre, string tags)
+            string author, string genre, ICollection<Tag> tags)
         {
             ID = id;
             Image = image;

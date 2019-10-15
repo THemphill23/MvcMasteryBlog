@@ -19,6 +19,7 @@ namespace MvcMasteryBlog
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IRepository<Blog>, BlogRepository>();
+            services.AddScoped<IRepository<Tag>, TagRepository>();
             services.AddMvc();
             services.AddDbContext<BlogContext>();
 

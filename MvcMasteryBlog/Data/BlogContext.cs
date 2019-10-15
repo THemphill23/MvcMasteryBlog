@@ -11,6 +11,7 @@ namespace MvcMasteryBlog.Data
     {
         public DbSet<Blog> Blogs { get; set; }
 
+        public DbSet<Tag> Tags { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -34,7 +35,7 @@ namespace MvcMasteryBlog.Data
                     Body = "Lorem Ipsum",
                     Author = "Chef Bobby",
                     Genre = "Food",
-                    Tags = "Food, Chef",
+                    //Tags = "Food, Chef",
                 },
 
                 new Blog()
@@ -46,7 +47,23 @@ namespace MvcMasteryBlog.Data
                     Date = 2077,
                     Author = "Chef Bobby",
                     Body = "Lorem Ipsum",
-                    Tags = "Food, Chef",
+                    //Tags = "Food, Chef",
+                });
+
+            modelBuilder.Entity<Tag>().HasData(
+                new Tag()
+                {
+                    ID = 1,
+                    Name = "Food",
+                    BlogID = 1,
+                },
+
+
+                new Tag()
+                {
+                    ID = 2,
+                    Name = "Chef",
+                    BlogID = 1,
                 });
 
             base.OnModelCreating(modelBuilder);
