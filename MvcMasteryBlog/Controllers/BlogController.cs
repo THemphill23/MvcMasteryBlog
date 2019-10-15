@@ -5,17 +5,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MvcMasteryBlog.Models;
-using Microsoft.AspNetCore.Mvc;
-using MvcMasteryBlog.Repositories;
+
 
 namespace MvcMasteryBlog.Controllers
 {
     public class BlogController : Controller
     {
-        Repository<Blog> blogRepo;
+        IRepository<Blog> blogRepo;
 
-        public BlogController(Repository<Blog> blogRepo)
+        public BlogController(IRepository<Blog> blogRepo)
         {
             this.blogRepo = blogRepo;
         }
@@ -23,17 +21,18 @@ namespace MvcMasteryBlog.Controllers
         public ViewResult Index()
         {
             var model = blogRepo.GetAll();
-
-            return View();
+            return View(model);
         }
-
-
         public ViewResult Details(int id)
         {
-            var model = blogRepo.GetById(id);
+            var model = blogRepo.GetByID(id);
 
             return View(model);
         }
 
     }
+
+
+
 }
+

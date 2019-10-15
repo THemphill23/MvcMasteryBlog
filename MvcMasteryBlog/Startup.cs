@@ -18,9 +18,9 @@ namespace MvcMasteryBlog
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IRepository<Blog>, BlogRepository>();
             services.AddMvc();
             services.AddDbContext<BlogContext>();
-            services.AddScoped<Repository<Blog>, BlogRepository>();
 
         }
 

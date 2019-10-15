@@ -12,7 +12,6 @@ namespace MvcMasteryBlog.Data
         public DbSet<Blog> Blogs { get; set; }
 
 
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var connectionString = "Server=(localdb)\\mssqllocaldb;Database=BlogReviews;Trusted_Connection=True;";
@@ -31,36 +30,27 @@ namespace MvcMasteryBlog.Data
                     ID = 1,
                     Image = "image",
                     Title = "Food Blog",
-                    Body = "Lorem Ipsum",
-                    Genre = "Food",
-                    Author = "Chef",
-                    Tags = "Food, Cooking",
                     Date = 2077,
+                    Body = "Lorem Ipsum",
+                    Author = "Chef Bobby",
+                    Genre = "Food",
+                    Tags = "Food, Chef",
                 },
-
 
                 new Blog()
                 {
                     ID = 2,
                     Image = "image",
                     Title = "Food Blog",
-                    Body = "Lorem Ipsum",
                     Genre = "Food",
-                    Author = "Chef",
-                    Tags = "Food, Cooking",
                     Date = 2077,
-                },
-                new Blog()
-                {
-                    ID = 3,
-                    Image = "image",
-                    Title = "Food Blog",
+                    Author = "Chef Bobby",
                     Body = "Lorem Ipsum",
-                    Genre = "Food",
-                    Author = "Chef",
-                    Tags = "Food, Cooking",
-                    Date = 2077,
+                    Tags = "Food, Chef",
                 });
+
+            base.OnModelCreating(modelBuilder);
+            
         }
     }
 }

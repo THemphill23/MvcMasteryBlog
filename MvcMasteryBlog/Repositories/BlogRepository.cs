@@ -4,17 +4,34 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MvcMasteryBlog.Models;
-using MvcMasteryBlog.Data;
+
 
 namespace MvcMasteryBlog.Repositories
 {
-    public class BlogRepository : Repository<Blog>
+    public class BlogRepository : IRepository<Blog>
     {
+        private BlogContext db;
 
-        public BlogRepository(BlogContext context) : base(context)
+        public BlogRepository(BlogContext db)
         {
+            this.db = db;
         }
 
+        public int Count()
+        {
+            return db.Blogs.Count();
+        }
+
+
+        public IEnumerable<Blog> GetAll()
+        {
+            return db.Blogs;
+        }
+
+
+        public Blog GetByID(int id)
+        {
+            return db.Blogs.SingleOrDefault(b => b.ID == id);
+        }
     }
 }

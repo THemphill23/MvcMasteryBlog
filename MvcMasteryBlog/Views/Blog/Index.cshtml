@@ -8,18 +8,19 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Vehicle Reviews</title>
 </head>
 <body>
-    <h1>Blog</h1>
+    <h1>Vehicle Reviews</h1>
     <div>
 
-        <section id="Blogs">
+        <section id="Products">
             @foreach (var blog in Model)
             {
+
                 <article>
                     <p><a href="/Blog/Details/@blog.ID">@blog.Title</a></p>
-                    <img src="@blog.Image" alt="blog" style=" height: 120px; width:200px;" />
+                    <img src="@blog.Image" alt="@blog.Title" style=" height: 240px; width:380px;" />
                 </article>
             }
         </section>

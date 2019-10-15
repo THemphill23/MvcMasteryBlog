@@ -9,7 +9,7 @@ namespace MvcMasteryBlog.Repositories
     {
         IEnumerable<T> GetAll();
 
-    T GetByID(int id);
+        T GetByID(int id);
        
 
     }
