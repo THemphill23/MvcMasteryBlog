@@ -13,6 +13,9 @@ namespace MvcMasteryBlog.Data
 
         public DbSet<Tag> Tags { get; set; }
 
+        public DbSet<Genre> Genres { get; set; }
+
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var connectionString = "Server=(localdb)\\mssqllocaldb;Database=BlogReviews;Trusted_Connection=True;";
@@ -63,6 +66,14 @@ namespace MvcMasteryBlog.Data
                 {
                     ID = 2,
                     Name = "Chef",
+                    BlogID = 1,
+                });
+
+            modelBuilder.Entity<Genre>().HasData(
+                new Genre()
+                {
+                    ID = 1,
+                    Name = "Food",
                     BlogID = 1,
                 });
 

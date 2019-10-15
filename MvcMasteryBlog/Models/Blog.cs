@@ -17,6 +17,9 @@ namespace MvcMasteryBlog.Models
 
         public virtual ICollection<Tag> Tags { get; set; }
 
+        public virtual ICollection<Genre> Genres { get; set; }
+
+
         public Blog()
         {
         }
