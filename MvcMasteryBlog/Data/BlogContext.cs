@@ -76,6 +76,31 @@ namespace MvcMasteryBlog.Data
                     Name = "Food",
                 });
 
+            modelBuilder.Entity<BlogTag>().HasData(
+                new BlogTag()
+                {
+                    BlogID = 1,
+                    TagID = 1,
+                },
+
+                new BlogTag()
+                {
+                    BlogID = 1,
+                    TagID = 2,
+                },
+
+                new BlogTag()
+                {
+                    BlogID = 2,
+                    TagID = 1,
+                },
+
+                new BlogTag()
+                {
+                    BlogID = 2,
+                    TagID = 2,
+                });
+
             base.OnModelCreating(modelBuilder);
             
         }

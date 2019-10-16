@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MvcMasteryBlog.Data;
 
 namespace MvcMasteryBlog.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    partial class BlogContextModelSnapshot : ModelSnapshot
+    [Migration("20191016192112_BlogTagMigration")]
+    partial class BlogTagMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -59,13 +61,6 @@ namespace MvcMasteryBlog.Migrations
                     b.HasIndex("TagID");
 
                     b.ToTable("BlogTags");
-
-                    b.HasData(
-                        new { BlogID = 1, TagID = 1 },
-                        new { BlogID = 1, TagID = 2 },
-                        new { BlogID = 2, TagID = 1 },
-                        new { BlogID = 2, TagID = 2 }
-                    );
                 });
 
             modelBuilder.Entity("MvcMasteryBlog.Models.Genre", b =>
