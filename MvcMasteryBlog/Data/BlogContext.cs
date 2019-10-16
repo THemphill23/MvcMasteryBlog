@@ -15,6 +15,8 @@ namespace MvcMasteryBlog.Data
 
         public DbSet<Genre> Genres { get; set; }
 
+        public DbSet<BlogTag> BlogTags { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -28,6 +30,8 @@ namespace MvcMasteryBlog.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<BlogTag>().HasKey(sc => new { sc.BlogID, sc.TagID });
+
             modelBuilder.Entity<Blog>().HasData(
                 new Blog()
                 {
@@ -37,8 +41,7 @@ namespace MvcMasteryBlog.Data
                     Date = 2077,
                     Body = "Lorem Ipsum",
                     Author = "Chef Bobby",
-                    Genre = "Food",
-                    //Tags = "Food, Chef",
+                    GenreID = 1,
                 },
 
                 new Blog()
@@ -46,11 +49,10 @@ namespace MvcMasteryBlog.Data
                     ID = 2,
                     Image = "image",
                     Title = "Food Blog",
-                    Genre = "Food",
                     Date = 2077,
                     Author = "Chef Bobby",
                     Body = "Lorem Ipsum",
-                    //Tags = "Food, Chef",
+                    GenreID = 1,
                 });
 
             modelBuilder.Entity<Tag>().HasData(
@@ -58,7 +60,6 @@ namespace MvcMasteryBlog.Data
                 {
                     ID = 1,
                     Name = "Food",
-                    BlogID = 1,
                 },
 
 
@@ -66,7 +67,6 @@ namespace MvcMasteryBlog.Data
                 {
                     ID = 2,
                     Name = "Chef",
-                    BlogID = 1,
                 });
 
             modelBuilder.Entity<Genre>().HasData(
@@ -74,7 +74,6 @@ namespace MvcMasteryBlog.Data
                 {
                     ID = 1,
                     Name = "Food",
-                    BlogID = 1,
                 });
 
             base.OnModelCreating(modelBuilder);

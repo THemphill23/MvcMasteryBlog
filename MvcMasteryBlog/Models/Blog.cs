@@ -13,11 +13,13 @@ namespace MvcMasteryBlog.Models
         public int Date { get; set; }
         public string Body { get; set; }
         public string Author { get; set; }
-        public string Genre { get; set; }
 
-        public virtual ICollection<Tag> Tags { get; set; }
+        public virtual IList<BlogTag> BlogTags { get; set; }
 
-        public virtual ICollection<Genre> Genres { get; set; }
+        //public virtual ICollection<Tag> Tags { get; set; }
+
+        public int GenreID { get; set; }
+        public virtual Genre Genre { get; set; }
 
 
         public Blog()
@@ -25,7 +27,7 @@ namespace MvcMasteryBlog.Models
         }
 
         public Blog(int id, string image, string title, int date, string body,
-            string author, string genre, ICollection<Tag> tags)
+            string author/*, ICollection<Tag> tags*/)
         {
             ID = id;
             Image = image;
@@ -33,8 +35,7 @@ namespace MvcMasteryBlog.Models
             Date = date;
             Body = body;
             Author = author;
-            Genre = genre;
-            Tags = tags;
+            //Tags = tags;
         }
         
     }

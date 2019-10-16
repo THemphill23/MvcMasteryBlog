@@ -15,12 +15,19 @@
     <div>
         <p><img src="@Model.Image" alt=@Model.Title style=" height: 240px; width:350px;" /></p>
         <p><span>@Model.Title</span></p>
-        <p>Manufacturer: <span>@Model.Author</span></p>
-        <p>Make: <span>@Model.Genre</span></p>
-        <p>Model: <span>@Model.Body</span></p>
-        <p>Category: <span>@Model.Date</span></p>
-        <p>Category: <span>@Model.Tags</span></p>
-        <p class="one"><a href="/Blog/Index/">Index</a></p>
+        <p>Author: <span>@Model.Author</span></p>
+        <p>Genre: <span>@Model.Genre.Name</span></p>
+        <p class="genreGo">Genre<a href="/Genre/Index/">@Model.Genre.Name</a></p>
+        <p>Blog: <span>@Model.Body</span></p>
+        <p>Publish Date: <span>@Model.Date</span></p>
+
+        @foreach (var tag in Model.BlogTags)
+        {
+            <p class="tagGo"><a href="/Tag/Index/@tag.TagID">@tag.Tag</a></p>
+
+        }
+
+        <p class="indexGo"><a href="/Blog/Index/">Index</a></p>
 
         <hr />
     </div>
