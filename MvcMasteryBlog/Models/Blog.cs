@@ -26,17 +26,17 @@ namespace MvcMasteryBlog.Models
         {
         }
 
-        public Blog(int id, string image, string title, DateTime datetime, string body,
-            string author/*, ICollection<Tag> tags*/)
-        {
-            ID = id;
-            Image = image;
-            Title = title;
-            DateTime = datetime;
-            Body = body;
-            Author = author;
-            //Tags = tags;
-        }
+        //public Blog(int id, string image, string title, DateTime datetime, string body,
+        //    string author, ICollection<Tag> tags)
+        //{
+        //    ID = id;
+        //    Image = image;
+        //    Title = title;
+        //    DateTime = datetime;
+        //    Body = body;
+        //    Author = author;
+        //    Tags = tags;
+        //}
         
     }
 }

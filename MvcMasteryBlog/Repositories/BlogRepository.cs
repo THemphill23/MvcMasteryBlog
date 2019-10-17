@@ -40,10 +40,10 @@ namespace MvcMasteryBlog.Repositories
         //    return blogs;
         //}
 
-        public IEnumerable<Genre> GetByGenreID(int id)
-        {
-            throw new NotImplementedException();
-        }
+        //public IEnumerable<Genre> GetByGenreID(int id)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public void Create(Blog blog)
         {

@@ -35,13 +35,12 @@ namespace MvcMasteryBlog.Controllers
         {
             blog.DateTime = DateTime.Now;
             blogRepo.Create(blog);
-            return RedirectToAction("Blog", new { id = blog.ID });
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
-        public ViewResult Create(int id)
+        public ViewResult Create()
         {
-            ViewBag.blogID = id;
             return View();
         }
 
@@ -49,7 +48,7 @@ namespace MvcMasteryBlog.Controllers
         public ActionResult Delete(Blog blog)
         {
             blogRepo.Delete(blog);
-            return RedirectToAction("Blog", new { id = blog.ID });
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
@@ -62,14 +61,15 @@ namespace MvcMasteryBlog.Controllers
         [HttpPost]
         public ActionResult Edit(Blog blog)
         {
+            blog.DateTime = DateTime.Now;
             blogRepo.Edit(blog);
-            return RedirectToAction("Blog", new { id = blog.ID });
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
         public ViewResult Edit(int id)
         {
-            var model = blogRepo.GetByGenreID(id);
+            var model = blogRepo.GetByID(id);
             return View(model);
         }
 

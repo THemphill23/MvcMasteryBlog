@@ -46,11 +46,11 @@ namespace MvcMasteryBlog.Repositories
         //    throw new NotImplementedException();
         //}
 
-        public IEnumerable<Blog> GetByGenreID(int genreID)
-        {
-            var blogs = db.Blogs.Where(b => b.GenreID == genreID);
-            return blogs;
-        }
+        //public IEnumerable<Blog> GetByGenreID(int genreID)
+        //{
+        //    var blogs = db.Blogs.Where(b => b.GenreID == genreID);
+        //    return blogs;
+        //}
 
         public Genre GetByID(int id)
         {
