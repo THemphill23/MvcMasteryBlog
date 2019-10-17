@@ -33,6 +33,7 @@ namespace MvcMasteryBlog.Controllers
         [HttpPost]
         public ActionResult Create(Blog blog)
         {
+            blog.DateTime = DateTime.Now;
             blogRepo.Create(blog);
             return RedirectToAction("Blog", new { id = blog.ID });
         }
@@ -71,7 +72,6 @@ namespace MvcMasteryBlog.Controllers
             var model = blogRepo.GetByID(id);
             return View(model);
         }
-
 
     }
 

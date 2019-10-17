@@ -28,15 +28,15 @@
                     <input type="submit" value="Edit Review" />
                 </form>
 
-                <form action="/Review/Delete/@blog.ID" method="get">
+                <form action="/Blog/Delete/@blog.ID" method="get">
                     <input type="submit" value="Delete Review" />
                 </form>
             }
         </section>
         <hr />
         <section id="Forms">
-            <form action="/Review/Create/" method="get">
-                <input type="submit" value="Add Review" /> <br>
+            <form action="/Blog/Create/@Model.First().ID" method="get">
+                <input type="submit" value="Add Blog" /> <br>
             </form>
 
         </section>

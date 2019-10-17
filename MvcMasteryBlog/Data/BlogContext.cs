@@ -41,6 +41,7 @@ namespace MvcMasteryBlog.Data
                     Body = "Lorem Ipsum",
                     Author = "Chef Bobby",
                     GenreID = 1,
+                    DateTime = DateTime.Now,
                 },
 
                 new Blog()
@@ -51,6 +52,8 @@ namespace MvcMasteryBlog.Data
                     Author = "Chef Bobby",
                     Body = "Lorem Ipsum",
                     GenreID = 1,
+                    DateTime = DateTime.Now,
+
                 });
 
             modelBuilder.Entity<Tag>().HasData(
