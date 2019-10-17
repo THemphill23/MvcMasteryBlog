@@ -70,7 +70,7 @@ namespace MvcMasteryBlog.Controllers
         [HttpGet]
         public ViewResult Edit(int id)
         {
-            var model = blogRepo.GetByID(id);
+            var model = blogRepo.GetByGenreID(id);
             return View(model);
         }
 

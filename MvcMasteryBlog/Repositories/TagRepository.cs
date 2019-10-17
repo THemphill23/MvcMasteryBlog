@@ -41,7 +41,12 @@ namespace MvcMasteryBlog.Repositories
            return db.Tags;
        }
 
-       public Tag GetByID(int id)
+        public IEnumerable<Tag> GetByGenreID(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Tag GetByID(int id)
        {
            return db.Tags.Single(b => b.ID == id);
        }
