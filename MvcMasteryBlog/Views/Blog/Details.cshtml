@@ -10,20 +10,21 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Details</title>
+    <link rel="stylesheet" href="~/Styles/Style.css" />
+
 </head>
 <body>
     <div>
         <p><img src="@Model.Image" alt=@Model.Title style=" height: 240px; width:350px;" /></p>
         <p><span>@Model.Title</span></p>
         <p>Author: <span>@Model.Author</span></p>
-        <p>Genre: <span>@Model.Genre.Name</span></p>
-        <p class="genreGo">Genre<a href="/Genre/Index/">@Model.Genre.Name</a></p>
+        <p class="genreGo">Genre: <a href="/Genre/Index/">@Model.Genre.Name</a></p>
         <p>Blog: <span>@Model.Body</span></p>
-        <p>Publish Date: <span>@Model.Date</span></p>
+        <p>Publish Date: <span>@Model.DateTime</span></p>
 
         @foreach (var tag in Model.BlogTags)
         {
-            <p class="tagGo"><a href="/Tag/Index/@tag.TagID">@tag.Tag</a></p>
+            <p class="tagGo">Tags: <a href="/Tag/Index/@tag.Tag.ID">@tag.Tag.Name</a></p>
 
         }
 
