@@ -1,0 +1,30 @@
+﻿@model MvcMasteryBlog.Models.Blog
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <p><img src="@Model.Image" alt=@Model.Title style=" height: 240px; width:350px;" /></p>
+        <p><span>@Model.Title</span></p>
+        <p>Manufacturer: <span>@Model.Author</span></p>
+        <p>Make: <span>@Model.Genre</span></p>
+        <p>Model: <span>@Model.Body</span></p>
+        <p>Category: <span>@Model.Date</span></p>
+        <p>Category: <span>@Model.Tags</span></p>
+        <p class="one"><a href="/Blog/Index/">Index</a></p>
+
+        <hr />
+    </div>
+    <footer><h6>&copy;Nobody Cares Inc. 2019</h6></footer>
+
+</body>
+</html>
