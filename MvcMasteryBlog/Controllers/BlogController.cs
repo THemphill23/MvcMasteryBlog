@@ -35,13 +35,13 @@ namespace MvcMasteryBlog.Controllers
         {
             blog.DateTime = DateTime.Now;
             blogRepo.Create(blog);
-            return RedirectToAction("Blog", new { id = blog.ID });
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
-        public ViewResult Create(int id)
+        public ViewResult Create()
         {
-            ViewBag.blogID = id;
+            //ViewBag.DateTime = DateTime.Now;
             return View();
         }
 
@@ -62,6 +62,7 @@ namespace MvcMasteryBlog.Controllers
         [HttpPost]
         public ActionResult Edit(Blog blog)
         {
+            blog.DateTime = DateTime.Now;
             blogRepo.Edit(blog);
             return RedirectToAction("Blog", new { id = blog.ID });
         }
