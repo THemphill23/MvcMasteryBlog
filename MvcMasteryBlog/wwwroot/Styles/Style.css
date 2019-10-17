@@ -11,7 +11,7 @@ body{
 nav {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    flex-direction: row;
     height: 2rem;
     justify-content: center;
 }
@@ -27,4 +27,9 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
+}
+
+img{
+    height: 7rem;
+    width: 13rem;
 }

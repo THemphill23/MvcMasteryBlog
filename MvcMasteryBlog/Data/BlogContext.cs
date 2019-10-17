@@ -36,10 +36,13 @@ namespace MvcMasteryBlog.Data
                 new Blog()
                 {
                     ID = 1,
-                    Image = "image",
-                    Title = "Food Blog",
-                    Body = "Lorem Ipsum",
-                    Author = "Chef Bobby",
+                    Image = "/Images/Pkmn.jfif",
+                    Title = "Gotta Catch 'Em All Fever",
+                    Author = "Ash Ketcham",
+                    Body = "Bulbasaur Ivysaur Venusaur Charmander Charmeleon Charizard Squirtle Wartortle Blastoise " +
+                    "Caterpie Metapod Butterfree Weedle Kakuna Beedrill Pidgey Pidgeotto Pidgeot Rattata Raticate " +
+                    "Spearow Fearow Ekans Arbok Pikachu Raichu Sandshrew Sandslash Nidoran Nidorina Nidoqueen " +
+                    "Nidoran Nidorino Nidoking Clefairy Clefable Vulpix Ninetales.",
                     GenreID = 1,
                     DateTime = DateTime.Now,
                 },
@@ -47,11 +50,17 @@ namespace MvcMasteryBlog.Data
                 new Blog()
                 {
                     ID = 2,
-                    Image = "image",
-                    Title = "Food Blog",
-                    Author = "Chef Bobby",
-                    Body = "Lorem Ipsum",
-                    GenreID = 1,
+                    Image = "/Images/LoL.jpg",
+                    Title = "A League Of Their Own",
+                    Author = "Riot Legend",
+                    Body = "Aatrox the Darkin Blade Ahri the Nine - Tailed Fox Akali the Rogue Assassin Alistar the Minotaur " +
+                    "Amumu the Sad Mummy Anivia the Cryophoenix Annie the Dark Child Ashe the Frost Archer " +
+                    "Aurelion Sol the Star Forger Azir the Emperor of the Sands Bard the Wandering Caretaker" +
+                    "Blitzcrank the Great Steam Golem Brand the Burning Vengeance Braum the Heart of the Freljord " +
+                    "Caitlyn the Sheriff of Piltover Camille the Steel Shadow Cassiopeia the Serpent's Embrace " +
+                    "Cho'Gath the Terror of the Void Corki the Daring Bombardier Darius the Hand of Noxus Diana, Scorn of the Moon" +
+                    "Dr.Mundo the Madman of Zaun Draven the Glorious Executioner",
+                    GenreID = 2,
                     DateTime = DateTime.Now,
 
                 });
@@ -60,21 +69,37 @@ namespace MvcMasteryBlog.Data
                 new Tag()
                 {
                     ID = 1,
-                    Name = "Food",
+                    Name = "Role Playing",
                 },
-
 
                 new Tag()
                 {
                     ID = 2,
-                    Name = "Chef",
+                    Name = "Nintedo",
+                },
+
+                new Tag()
+                {
+                    ID = 3,
+                    Name = "Riot",
+                },
+
+                new Tag()
+                {
+                    ID = 4,
+                    Name = "Action",
                 });
 
             modelBuilder.Entity<Genre>().HasData(
                 new Genre()
                 {
                     ID = 1,
-                    Name = "Food",
+                    Name = "RPG",
+                },
+                new Genre()
+                {
+                    ID = 2,
+                    Name = "MOBA",
                 });
 
             modelBuilder.Entity<BlogTag>().HasData(
@@ -93,13 +118,13 @@ namespace MvcMasteryBlog.Data
                 new BlogTag()
                 {
                     BlogID = 2,
-                    TagID = 1,
+                    TagID = 3,
                 },
 
                 new BlogTag()
                 {
                     BlogID = 2,
-                    TagID = 2,
+                    TagID = 4,
                 });
 
             base.OnModelCreating(modelBuilder);
