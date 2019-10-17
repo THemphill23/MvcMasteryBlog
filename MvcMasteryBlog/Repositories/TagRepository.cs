@@ -21,7 +21,22 @@ namespace MvcMasteryBlog.Repositories
            return db.Tags.Count();
        }
 
-       public IEnumerable<Tag> GetAll()
+        public void Create(Tag obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(Tag obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Edit(Tag obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Tag> GetAll()
        {
            return db.Tags;
        }

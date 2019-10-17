@@ -24,10 +24,22 @@
                     <p><a href="/Blog/Details/@blog.ID">@blog.Title</a></p>
                     <img src="@blog.Image" alt="@blog.Title" style=" height: 240px; width:380px;" />
                 </article>
+                <form action="/Blog/Edit/@blog.ID" method="get">
+                    <input type="submit" value="Edit Review" />
+                </form>
+
+                <form action="/Review/Delete/@blog.ID" method="get">
+                    <input type="submit" value="Delete Review" />
+                </form>
             }
         </section>
+        <hr />
+        <section id="Forms">
+            <form action="/Review/Create/" method="get">
+                <input type="submit" value="Add Review" /> <br>
+            </form>
 
-
+        </section>
     </div>
     <footer><h6>&copy;Nobody Cares Inc. 2019</h6></footer>
 </body>

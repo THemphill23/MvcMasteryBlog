@@ -21,6 +21,21 @@ namespace MvcMasteryBlog.Repositories
             return db.Genres.Count();
         }
 
+        public void Create(Genre obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(Genre obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Edit(Genre obj)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Genre> GetAll()
         {
             return db.Genres;
