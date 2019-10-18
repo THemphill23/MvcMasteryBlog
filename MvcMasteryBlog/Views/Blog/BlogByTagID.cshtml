@@ -14,14 +14,14 @@
 
 </head>
 <body>
-    <div>
+    <div class="color">
 
         @foreach (var blog in Model)
         {
-        <p><img src="@blog.Image" alt=@blog.Title /></p>
+        <p><img src="@blog.Image" alt=@blog.Title class="blogIMG"/></p>
         <p><span>@blog.Title</span></p>
         <p>Author: <span>@blog.Author</span></p>
-        <p class="genreGo">Genre: <a href="/Genre/Index/">@blog.Genre.Name</a></p>
+        <p id="Genre">Genre: <a href="/Genre/Index/">@blog.Genre.Name</a></p>
         <p>Blog: <span>@blog.Body</span></p>
         <p>Publish Date: <span>@blog.DateTime</span></p>
 

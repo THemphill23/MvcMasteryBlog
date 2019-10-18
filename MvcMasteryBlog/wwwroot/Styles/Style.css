@@ -22,9 +22,9 @@ nav {
     color: black;
 }
 
-.color :hover {
+/*.color :hover {
     color: brown;
-}
+}*/
 
 #Tag :link, #Tag :visited {
     color: black;
@@ -52,6 +52,11 @@ nav {
 .flexItem {
     margin-left: 0rem;
     padding: 1rem;
+}
+
+.flexItem :hover {
+    color: brown;
+
 }
 
 footer {

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MvcMasteryBlog.Data;
 
 namespace MvcMasteryBlog.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    partial class BlogContextModelSnapshot : ModelSnapshot
+    [Migration("20191018213500_AdditionalDataMigration")]
+    partial class AdditionalDataMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,9 +46,9 @@ namespace MvcMasteryBlog.Migrations
                     b.ToTable("Blogs");
 
                     b.HasData(
-                        new { ID = 1, Author = "Ash Ketcham", Body = "Bulbasaur Ivysaur Venusaur Charmander Charmeleon Charizard Squirtle Wartortle Blastoise Caterpie Metapod Butterfree Weedle Kakuna Beedrill Pidgey Pidgeotto Pidgeot Rattata Raticate Spearow Fearow Ekans Arbok Pikachu Raichu Sandshrew Sandslash Nidoran Nidorina Nidoqueen Nidoran Nidorino Nidoking Clefairy Clefable Vulpix Ninetales.", DateTime = new DateTime(2019, 10, 18, 17, 45, 30, 722, DateTimeKind.Local), GenreID = 1, Image = "/Images/Pkmn.jfif", Title = "Gotta Catch 'Em All Fever" },
-                        new { ID = 2, Author = "Riot Legend", Body = "Aatrox the Darkin Blade Ahri the Nine - Tailed Fox Akali the Rogue Assassin Alistar the Minotaur Amumu the Sad Mummy Anivia the Cryophoenix Annie the Dark Child Ashe the Frost Archer Aurelion Sol the Star Forger Azir the Emperor of the Sands Bard the Wandering CaretakerBlitzcrank the Great Steam Golem Brand the Burning Vengeance Braum the Heart of the Freljord Caitlyn the Sheriff of Piltover Camille the Steel Shadow Cassiopeia the Serpent's Embrace Cho'Gath the Terror of the Void Corki the Daring Bombardier Darius the Hand of Noxus Diana, Scorn of the MoonDr.Mundo the Madman of Zaun Draven the Glorious Executioner", DateTime = new DateTime(2019, 10, 18, 17, 45, 30, 723, DateTimeKind.Local), GenreID = 2, Image = "/Images/LoL.jpg", Title = "A League Of Their Own" },
-                        new { ID = 3, Author = "Commander Shepard", Body = "Shepard Liara Garrus Turian Asari Thane Jacob Miranda Kaiden Ashley Space normandy Cerberous ShootingGalaxy Mass Effect Field Shotguns Pistols Heavy Weapons Rifles Armor Elcor Drell Grunt Wrex Solldier VanguardAdept Biotics", DateTime = new DateTime(2019, 10, 18, 17, 45, 30, 723, DateTimeKind.Local), GenreID = 1, Image = "/Images/MassEffect3.jpg", Title = "Space Chills" }
+                        new { ID = 1, Author = "Ash Ketcham", Body = "Bulbasaur Ivysaur Venusaur Charmander Charmeleon Charizard Squirtle Wartortle Blastoise Caterpie Metapod Butterfree Weedle Kakuna Beedrill Pidgey Pidgeotto Pidgeot Rattata Raticate Spearow Fearow Ekans Arbok Pikachu Raichu Sandshrew Sandslash Nidoran Nidorina Nidoqueen Nidoran Nidorino Nidoking Clefairy Clefable Vulpix Ninetales.", DateTime = new DateTime(2019, 10, 18, 17, 35, 0, 358, DateTimeKind.Local), GenreID = 1, Image = "/Images/Pkmn.jfif", Title = "Gotta Catch 'Em All Fever" },
+                        new { ID = 2, Author = "Riot Legend", Body = "Aatrox the Darkin Blade Ahri the Nine - Tailed Fox Akali the Rogue Assassin Alistar the Minotaur Amumu the Sad Mummy Anivia the Cryophoenix Annie the Dark Child Ashe the Frost Archer Aurelion Sol the Star Forger Azir the Emperor of the Sands Bard the Wandering CaretakerBlitzcrank the Great Steam Golem Brand the Burning Vengeance Braum the Heart of the Freljord Caitlyn the Sheriff of Piltover Camille the Steel Shadow Cassiopeia the Serpent's Embrace Cho'Gath the Terror of the Void Corki the Daring Bombardier Darius the Hand of Noxus Diana, Scorn of the MoonDr.Mundo the Madman of Zaun Draven the Glorious Executioner", DateTime = new DateTime(2019, 10, 18, 17, 35, 0, 359, DateTimeKind.Local), GenreID = 2, Image = "/Images/LoL.jpg", Title = "A League Of Their Own" },
+                        new { ID = 3, Author = "Commander Shepard", Body = "Shepard Liara Garrus Turian Asari Thane Jacob Miranda Kaiden Ashley Space normandy Cerberous ShootingGalaxy Mass Effect Field Shotguns Pistols Heavy Weapons Rifles Armor Elcor Drell Grunt Wrex Solldier VanguardAdept Biotics", DateTime = new DateTime(2019, 10, 18, 17, 35, 0, 359, DateTimeKind.Local), GenreID = 1, Image = "/Images/MassEffect3", Title = "Space Chills" }
                     );
                 });
 
@@ -68,7 +70,7 @@ namespace MvcMasteryBlog.Migrations
                         new { BlogID = 2, TagID = 3 },
                         new { BlogID = 2, TagID = 4 },
                         new { BlogID = 3, TagID = 1 },
-                        new { BlogID = 3, TagID = 4 }
+                        new { BlogID = 1, TagID = 4 }
                     );
                 });
 
