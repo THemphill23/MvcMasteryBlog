@@ -1,27 +1,53 @@
 h1{
-    color: blue
+    color: black;
 }
 
 
 body{
-    background-color: aliceblue;
+    background-color: indianred;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 nav {
-    /*position: fixed;
-    top: 0;
-    left: 0;*/
+    background-color: papayawhip;
     display: flex;
     flex-direction: row;
-    flex-direction: row;
+    background-size: auto;
+    align-items: center;
     height: 2rem;
     justify-content: center;
 }
 
-/*nav a{
-    padding: 1rem, 1rem;
-}*/
+.color :link, .color :visited {
+    color: black;
+}
+
+.color :hover {
+    color: brown;
+}
+
+#Tag :link, #Tag :visited {
+    color: black;
+}
+
+#Genre :link, #Genre :visited {
+    color: black;
+}
+
+#Genre :hover {
+    color: brown;
+}
+
+#Tag :hover {
+    color: brown;
+}
+
+.container{
+    width: 20rem;
+    height: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .flexItem {
     margin-left: 0rem;
@@ -35,17 +61,18 @@ footer {
     width: 100%;
     text-align: center;
 }
-/*.photoT{
-    height: 0rem;
-    width: 0rem;
+#photoT{
+    height: 15rem;
+    width: 12rem;
 }
 
-.photoB {
-    height: 0rem;
-    width: 0rem;
+#photoB {
+    height: 15rem;
+    width: 15rem;
 }
+
 
 .blogIMG{
-    height: 7rem;
-    width: 13rem;
-}*/
+    height: 11rem;
+    width: 20rem;
+}

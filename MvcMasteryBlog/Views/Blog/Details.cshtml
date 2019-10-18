@@ -14,8 +14,10 @@
 
 </head>
 <body>
-    <div>
-        <p><img src="@Model.Image" alt=@Model.Title /></p>
+        <p class="color"><a href="/Blog/Index/">Index</a></p>
+        <hr />
+    <div class="color">
+        <p><img src="@Model.Image" alt=@Model.Title class="blogIMG"/></p>
         <p><span>@Model.Title</span></p>
         <p>Author: <span>@Model.Author</span></p>
         <p class="genreGo">Genre: <a href="/Genre/Index/">@Model.Genre.Name</a></p>
@@ -28,7 +30,6 @@
 
         }
 
-        <p class="indexGo"><a href="/Blog/Index/">Index</a></p>
         <hr />
     </div>
 

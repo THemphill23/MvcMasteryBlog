@@ -14,7 +14,6 @@ namespace MvcMasteryBlog.Repositories
         void Delete(T obj);
         void Edit(T obj);
         IEnumerable<T> GetByTagID(int id);
-        //IEnumerable<T> GetByGenreID(int id);
     }
 
 }

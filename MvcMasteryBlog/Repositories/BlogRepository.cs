@@ -41,18 +41,6 @@ namespace MvcMasteryBlog.Repositories
             return blogs;
         }
 
-        //public IEnumerable<Blog> GetByGenreID(int genreID)
-        //{
-        //    var blogs = db.Blogs.Where(b => b.GenreID== genreID);
-        //    return blogs;
-        //}
-
-
-        //public IEnumerable<Genre> GetByGenreID(int id)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
         public void Create(Blog blog)
         {
             db.Blogs.Add(blog);
