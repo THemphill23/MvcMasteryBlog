@@ -21,14 +21,40 @@ namespace MvcMasteryBlog.Repositories
            return db.Tags.Count();
        }
 
-       public IEnumerable<Tag> GetAll()
+        public void Create(Tag obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(Tag obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Edit(Tag obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Tag> GetAll()
        {
            return db.Tags;
        }
 
-       public Tag GetByID(int id)
+        public IEnumerable<Tag> GetByGenreID(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Tag GetByID(int id)
        {
-           return db.Tags.Single(b => b.ID == id);
+           return db.Tags.SingleOrDefault(b => b.ID == id);
        }
+
+
+        public IEnumerable<Tag> GetByTagID(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

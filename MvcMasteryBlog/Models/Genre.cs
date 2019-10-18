@@ -10,17 +10,17 @@ namespace MvcMasteryBlog.Models
         public string Name { get; set; }
         public int ID { get; set; }
 
-        public int BlogID { get; set; }
-        public virtual Blog Blog { get; set; }
+        public virtual ICollection<Blog> Blogs { get; set; }
 
         public Genre()
         {
         }
 
-        public Genre(int id, string name)
+        public Genre(int id, string name, ICollection<Blog> blogs)
         {
             ID = id;
             Name = name;
+            Blogs = blogs;
         }
     }
 }

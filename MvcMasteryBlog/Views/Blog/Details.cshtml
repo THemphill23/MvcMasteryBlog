@@ -10,21 +10,29 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Details</title>
+    <link rel="stylesheet" href="~/Styles/Style.css" />
+
 </head>
 <body>
     <div>
-        <p><img src="@Model.Image" alt=@Model.Title style=" height: 240px; width:350px;" /></p>
+        <p><img src="@Model.Image" alt=@Model.Title /></p>
         <p><span>@Model.Title</span></p>
-        <p>Manufacturer: <span>@Model.Author</span></p>
-        <p>Make: <span>@Model.Genre</span></p>
-        <p>Model: <span>@Model.Body</span></p>
-        <p>Category: <span>@Model.Date</span></p>
-        <p>Category: <span>@Model.Tags</span></p>
-        <p class="one"><a href="/Blog/Index/">Index</a></p>
+        <p>Author: <span>@Model.Author</span></p>
+        <p class="genreGo">Genre: <a href="/Genre/Index/">@Model.Genre.Name</a></p>
+        <p>Blog: <span>@Model.Body</span></p>
+        <p>Publish Date: <span>@Model.DateTime</span></p>
 
+        @foreach (var tag in Model.BlogTags)
+        {
+            <p class="tagGo">Tags: <a href="/Tag/Index/@tag.Tag.ID">@tag.Tag.Name</a></p>
+
+        }
+
+        <p class="indexGo"><a href="/Blog/Index/">Index</a></p>
         <hr />
     </div>
-    <footer><h6>&copy;Nobody Cares Inc. 2019</h6></footer>
+
+    <footer><h6>&copy;Gaming Doctors, 2019</h6></footer>
 
 </body>
 </html>
