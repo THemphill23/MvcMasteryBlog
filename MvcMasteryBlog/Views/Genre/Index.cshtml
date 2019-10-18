@@ -1,0 +1,35 @@
+﻿@model IEnumerable<MvcMasteryBlog.Models.Genre>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/Styles/Style.css" />
+
+</head>
+<body>
+    <h1>Genres</h1>
+    <div>
+
+        <section id="Tag">
+            @foreach (var genre in Model)
+            {
+
+                <article>
+                    <p><a href="/Blog/Details/@genre.ID">@genre.Name</a></p>
+                </article>
+            }
+        </section>
+        <p class="homeGo"><a href="/Home/Index/">Home</a></p>
+
+
+    </div>
+    <footer><h6>&copy;Nobody Cares Inc. 2019</h6></footer>
+</body>
+</html>
