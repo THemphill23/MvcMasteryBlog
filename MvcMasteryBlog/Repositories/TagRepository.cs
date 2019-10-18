@@ -48,7 +48,13 @@ namespace MvcMasteryBlog.Repositories
 
         public Tag GetByID(int id)
        {
-           return db.Tags.Single(b => b.ID == id);
+           return db.Tags.SingleOrDefault(b => b.ID == id);
        }
+
+
+        public IEnumerable<Tag> GetByTagID(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

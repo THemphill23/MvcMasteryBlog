@@ -30,6 +30,12 @@ namespace MvcMasteryBlog.Controllers
             return View(model);
         }
 
+        public ViewResult BlogByTagID(int id)
+        {
+            var model = blogRepo.GetByTagID(id);
+            return View(model);
+        }
+
         [HttpPost]
         public ActionResult Create(Blog blog)
         {

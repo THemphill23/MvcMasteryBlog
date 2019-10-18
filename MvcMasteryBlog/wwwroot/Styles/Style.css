@@ -9,12 +9,19 @@ body{
 }
 
 nav {
+    /*position: fixed;
+    top: 0;
+    left: 0;*/
     display: flex;
     flex-direction: row;
     flex-direction: row;
     height: 2rem;
     justify-content: center;
 }
+
+/*nav a{
+    padding: 1rem, 1rem;
+}*/
 
 .flexItem {
     margin-left: 0rem;
@@ -28,8 +35,17 @@ footer {
     width: 100%;
     text-align: center;
 }
+/*.photoT{
+    height: 0rem;
+    width: 0rem;
+}
 
-img{
+.photoB {
+    height: 0rem;
+    width: 0rem;
+}
+
+.blogIMG{
     height: 7rem;
     width: 13rem;
-}
+}*/

@@ -75,7 +75,7 @@ namespace MvcMasteryBlog.Data
                 new Tag()
                 {
                     ID = 2,
-                    Name = "Nintedo",
+                    Name = "Nintendo",
                 },
 
                 new Tag()

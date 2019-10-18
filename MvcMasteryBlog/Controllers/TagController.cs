@@ -22,5 +22,12 @@ namespace MvcMasteryBlog.Controllers
             var model = tagRepo.GetAll();
             return View(model);
         }
+
+        public ViewResult Details(int id)
+        {
+            var model = tagRepo.GetByID(id);
+
+            return View(model);
+        }
     }
 }
