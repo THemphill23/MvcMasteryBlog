@@ -31,14 +31,14 @@ namespace MvcMasteryBlog.Tests
         }
 
         [Fact]
-        public void Index_Passes_All_Products_To_View()
+        public void Index_Passes_All_Blogs_To_View()
         {
-            var expectedProducts = new List<Blog>();
-            blogRepo.GetAll().Returns(expectedProducts);
+            var expectedBlogs = new List<Blog>();
+            blogRepo.GetAll().Returns(expectedBlogs);
 
             var result = underTest.Index();
 
-            Assert.Equal(expectedProducts, result.Model);
+            Assert.Equal(expectedBlogs, result.Model);
         }
 
         [Fact]
