@@ -16,11 +16,5 @@ namespace MvcMasteryBlog.Models
         {
         }
 
-        public Genre(int id, string name, ICollection<Blog> blogs)
-        {
-            ID = id;
-            Name = name;
-            Blogs = blogs;
-        }
     }
 }

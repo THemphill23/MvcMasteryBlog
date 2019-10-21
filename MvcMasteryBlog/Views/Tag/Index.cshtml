@@ -16,20 +16,20 @@
 <body>
     <h1>Tags</h1>
     <div>
-
+        <p class="color"><a href="/Home/Index/">Return Home</a></p>
+        <hr />
         <section id="Tag">
             @foreach (var tag in Model)
             {
 
                 <article>
-                    <p><a href="/Blog/BlogByTagID/@tag.ID">@tag.Name</a></p>
+                    <p><a href="/Blog/BlogByTagID/@tag.ID" class="color">@tag.Name</a></p>
                 </article>
             }
         </section>
-        <p class="homeGo"><a href="/Home/Index/">Return Home</a></p>
 
 
     </div>
-    <footer><h6>&copy;Nobody Cares Inc. 2019</h6></footer>
+    <footer><h6>&copy;Gaming Doctors, 2019</h6></footer>
 </body>
 </html>

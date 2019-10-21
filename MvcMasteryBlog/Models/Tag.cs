@@ -11,18 +11,11 @@ namespace MvcMasteryBlog.Models
         public int ID { get; set; }
    
         public virtual IList<BlogTag> BlogTags { get; set; }      
-        //public int BlogID { get; set; }
-        //public virtual Blog Blog { get; set; }
 
         public Tag()
         {
         }
 
-        public Tag(int id, string name)
-        {
-            ID = id;
-            Name = name;
-        }
     }
 
 

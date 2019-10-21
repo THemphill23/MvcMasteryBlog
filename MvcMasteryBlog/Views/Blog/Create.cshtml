@@ -32,11 +32,6 @@
                     <input asp-for="Title" class="form-control" />
                     <span asp-validation-for="Title" class="text-danger"></span>
                 </div>
-                @*<div class="form-group">
-                    <label asp-for="DateTime" class="control-label"></label>
-                    <input type="hidden" name="DateTime" class="form-control" value="ViewBag.DateTime" />
-                    <span asp-validation-for="DateTime" class="text-danger"></span>
-                </div>*@
                 <div class="form-group">
                     <label asp-for="Author" class="control-label"></label>
                     <input asp-for="Author" class="form-control" />
@@ -45,9 +40,8 @@
                 <div class="form-group">
                     <label asp-for="Genre" class="control-label"></label>
                     <select name="GenreID" class="form-control">
-                    <option value="1">RPG</option>
-                    <option value="2">MOBA</option>
-                    @*<option value="3">Trip</option>*@
+                        <option value="1">RPG</option>
+                        <option value="2">MOBA</option>
                     </select>
                     <span asp-validation-for="Genre" class="text-danger"></span>
                 </div>
@@ -56,10 +50,6 @@
                     <textarea name="Body" class="form-control"></textarea>
                     <span asp-validation-for="Body" class="text-danger"></span>
                 </div>
-                @*<div class="form-group">
-                    <input type="hidden" name="BlogID" class="form-control" value="@ViewBag.blogID" />
-                    <span asp-validation-for="ID" class="text-danger"></span>
-                </div>*@
                 <div class="form-group">
                     <input type="submit" value="Create" class="btn btn-default" />
                 </div>
@@ -70,6 +60,7 @@
     <div>
         <a asp-action="Index">Back to List</a>
     </div>
+    <footer><h6>&copy;Gaming Doctors, 2019</h6></footer>
 
 </body>
 </html>

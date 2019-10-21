@@ -63,6 +63,19 @@ namespace MvcMasteryBlog.Data
                     GenreID = 2,
                     DateTime = DateTime.Now,
 
+                },
+
+                new Blog()
+                {
+                    ID = 3,
+                    Image = "/Images/MassEffect3.jpg",
+                    Title = "Space Chills",
+                    Author = "Commander Shepard",
+                    Body = "Shepard Liara Garrus Turian Asari Thane Jacob Miranda Kaiden Ashley Space normandy Cerberous Shooting" +
+                    "Galaxy Mass Effect Field Shotguns Pistols Heavy Weapons Rifles Armor Elcor Drell Grunt Wrex Solldier Vanguard" +
+                    "Adept Biotics",
+                    GenreID = 1,
+                    DateTime = DateTime.Now,
                 });
 
             modelBuilder.Entity<Tag>().HasData(
@@ -125,7 +138,20 @@ namespace MvcMasteryBlog.Data
                 {
                     BlogID = 2,
                     TagID = 4,
-                });
+                },
+
+
+                 new BlogTag()
+                 {
+                     BlogID = 3,
+                     TagID = 1,
+                 },
+
+                  new BlogTag()
+                  {
+                      BlogID = 3,
+                      TagID = 4,
+                  });
 
             base.OnModelCreating(modelBuilder);
             

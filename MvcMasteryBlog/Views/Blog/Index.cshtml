@@ -15,12 +15,20 @@
 <body>
     <h1>Blog</h1>
     <div>
+        <p class="color"><a href="/Home/Index/">Home</a></p>
+        <hr />
+        <section id="Forms">
+            <form action="/Blog/Create" method="get">
+                <input type="submit" value="Add Blog" /> <br>
+            </form>
+
+        </section>
 
         <section id="Blog">
             @foreach (var blog in Model)
             {
 
-                <article>
+                <article class="color">
                     <p><a href="/Blog/Details/@blog.ID">@blog.Title</a></p>
                     <img class="blogIMG" src="@blog.Image" alt="@blog.Title" />
                 </article>
@@ -34,13 +42,6 @@
             }
         </section>
         <hr />
-        <section id="Forms">
-            <form action="/Blog/Create" method="get">
-                <input type="submit" value="Add Blog" /> <br>
-            </form>
-
-        </section>
-        <p class="homeGo"><a href="/Home/Index/">Home</a></p>
 
     </div>
     <footer><h6>&copy;Gaming Doctors, 2019</h6></footer>
